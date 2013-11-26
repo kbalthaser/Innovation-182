@@ -83,12 +83,7 @@
             <artifactId>hibernate-c3p0</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-        
-        <dependency>
-            <groupId>oracle</groupId>
-            <artifactId>jdbc</artifactId>
-            <version>11.2.0.4</version>
-        </dependency>
+
 
         <!-- TEST Dependencies -->
         <dependency>
