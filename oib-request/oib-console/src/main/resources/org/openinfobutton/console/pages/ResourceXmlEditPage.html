@@ -1,0 +1,64 @@
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<wicket:head>    <!-- Wicket:head allows us to contribute to the head tag of the parent page -->
+    <link rel="stylesheet" href="./css/jquery.xmleditor.css" type="text/css"/>
+    <script src="/oib-console/lib/ace/src-min/ace.js"></script>
+    <!-- <script src="/oib-console/lib/jquery.min.js"></script> -->
+    <script src="/oib-console/lib/jquery-ui.min.js"></script>
+    <script src="/oib-console/lib/json2.js"></script>
+    <script src="/oib-console/lib/cycle.js"></script>
+    <script src="/oib-console/lib/jquery.autosize-min.js"></script>
+    <script src="/oib-console/lib/vkbeautify.js"></script>
+    <script src="/oib-console/xsd/xsd2json.js"></script>
+    <script src="/oib-console/jquery.xmleditor.js"></script>
+    <style>
+        .main-template {
+        padding: 40px 15px;
+        text-align: left;
+        }
+
+        /* Turn off the box sizing tweak inherited by bootstrap, this makes the editor look way better */
+
+        *, *:before, *:after {
+        -moz-box-sizing: content-box;
+        }
+    </style>
+</wicket:head>
+<wicket:extend>
+
+    <h1>Edit Profile Definition</h1>
+
+    <div class="wrapper">
+
+    </div>
+    <div id="edit">
+    </div>
+
+    <script type="text/javascript">
+		$(function() {
+            var vars = [], hash;
+            var q = document.URL.split('?')[1];
+            if(q != undefined){
+                q = q.split('&');
+                for(var i = 0; i < q.length; i++){
+                    hash = q[i].split('=');
+                    vars.push(hash[1]);
+                    vars[hash[0]] = hash[1];
+                }
+            }
+
+            $("#edit").xmlEditor({
+                    ajaxOptions: {
+					xmlRetrievalPath: "/oib-console/profileXml?id=" + vars['id'],
+					xmlUploadPath: "/oib-console/profileXml?id=" + vars['id']
+				},
+                    schema: "../../schema/ResourceProfile-v2.8_LITE.json",
+                    libPath : '../../lib/'
+
+            });
+        });
+
+
+
+    </script>
+</wicket:extend>
+</html>

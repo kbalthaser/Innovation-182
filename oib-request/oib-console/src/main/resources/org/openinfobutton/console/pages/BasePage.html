@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/webjars/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <title>Open Infobutton</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./webjars/bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet"> -->
+    <style>
+        body {
+        padding-top: 50px;
+        }
+        .main-template {
+        padding: 40px 15px;
+        text-align: center;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="/webjars/bootstrap/3.0.3/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand">Open Infobutton - Administration</span>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a wicket:id="Index">Home</a></li>
+                <li><a wicket:id="ResourceList">Resources</a></li>
+                <li><a wicket:id="LogOff">Sign Out</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="main-template">
+        <wicket:child/>
+    </div>
+
+</div>
+<!-- /.container -->
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">&copy; 2014 OpenInfobutton.org</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <!-- Wicket:head allows us to contribute to the head tag of the parent page -->
+    <style>
+        .main-template {
+        padding: 40px 15px;
+        text-align: left;
+        }
+
+    </style>
+</wicket:head>
+
+<wicket:extend>
+    <h1>Available Knowledge Resources</h1>
+
+    <div>
+        <button type="button" class="btn btn-primary" wicket:id="newProfile">New Profile</button>
+        <br/>
+    </div>
+    <div>
+        <span wicket:id="navigator">[dataview navigator]</span>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Actions</th>
+            <th>Id</th>
+            <th>Resource Name</th>
+            <th>Publish Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr wicket:id="rows">
+            <td><a wicket:id="edit">Edit Profile</a> <a wicket:id="editXml"> Edit XML</a></td>
+            <td><span wicket:id="id"></span></td>
+            <td><span wicket:id="name"></span></td>
+            <td><span wicket:id="published"></span></td>
+        </tr>
+        </tbody>
+    </table>
+</wicket:extend>
+</html>
