@@ -2,7 +2,6 @@ package org.openinfobutton.console.pages;
 
 
 import edu.utah.further.profiledb.domain.Profiles;
-import org.apache.log4j.Logger;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
@@ -24,9 +23,6 @@ import java.util.List;
  * Time:     9:31 PM
  */
 public class ResourceEditForm extends Form {
-
-    @Inject
-    Logger logger;
 
     @Inject
     KnowledgeResourceService service;
